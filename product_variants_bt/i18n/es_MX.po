@@ -94,3 +94,8 @@ msgstr "Abierto"
 #: model:ir.model,name:product_variants_bt.model_product_template
 msgid "Product"
 msgstr "Producto"
+
+#. module: product_variants_bt
+#: model_terms:ir.ui.view,arch_db:product_variants_bt.inherit_product_template_search_view
+msgid "Product Make"
+msgstr "Marca de Producto"

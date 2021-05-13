@@ -14,5 +14,21 @@
       </field>
     </record>
 
+    <!--View Inherit search of Product Template-->
+    <record id="inherit_product_template_search_view" model="ir.ui.view">
+      <field name="name">inherit.product.template.search</field>
+      <field name="model">product.template</field>
+      <field name="inherit_id" ref="product.product_template_search_view" />
+      <field name="arch" type="xml">
+        <field name="categ_id" position="after">
+          <field name="brand_id"/>
+        </field>
+
+        <filter name="categ_id" position="after">
+          <filter string="Product Make" name="brand_id" context="{'group_by': 'brand_id'}" />
+        </filter>
+      </field>
+    </record>
+
   </data>
 </odoo>
