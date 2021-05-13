@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+
+    <!--view kanban of Manufacturers-->
+    <record id="view_product_manufacturers_kanban" model="ir.ui.view">
+      <field name="name">product.brand.kanban</field>
+      <field name="model">product.brand</field>
+      <field name="type">kanban</field>
+      <field name="arch" type="xml">
+        <kanban class="o_res_partner_kanban">
+          <field name="id"/>
+          <field name="name"/>
+          <templates>
+            <t t-name="kanban-box">
+              <div class="oe_kanban_vignette oe_semantic_html_override">
+                <a type="open" href="#" class="o_kanban_image oe_kanban_action">
+                  <img alt="Open" t-att-src="kanban_image('product.brand', 'image', record.id.raw_value)" class="img-fluid" style="width:100px;"/>
+                </a>
+                <div class="oe_kanban_details">
+                  <h4 class="oe_partner_heading">
+                    <a type="open" class="o_kanban_record_title">
+                      <field name="name"/>
+                    </a>
+                  </h4>
+                </div>
+              </div>
+            </t>
+          </templates>
+        </kanban>
+      </field>
+    </record>
+
+    <!--view form of Manufacturers-->
+    <record id="view_product_manufacturers_form" model="ir.ui.view">
+      <field name="name">product.brand.form</field>
+      <field name="model">product.brand</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <form string="Model Make">
+          <sheet>
+            <group>
+              <div>
+                <field name="image" widget="image" class="oe_avatar"/>
+                <label for="name" class="oe_edit_only"/>
+                <h1>
+                  <field name="name"/>
+                </h1>
+              </div>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!--view tree of Manufacturers-->
+    <record id="view_product_manufacturers_tree" model="ir.ui.view">
+      <field name="name">product.brand.form</field>
+      <field name="model">product.brand</field>
+      <field name="type">tree</field>
+      <field name="arch" type="xml">
+        <tree string="Model Make">
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+
+    <!--Action Manufacturers-->
+    <record id="action_product_manufacturers" model="ir.actions.act_window">
+      <field name="name">Manufacturers</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">product.brand</field>
+      <field name="view_mode">kanban,tree,form</field>
+      <field name="view_id" ref="product_variants_bt.view_product_manufacturers_kanban" />
+      <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">
+            Create New Manufacturers
+        </p>
+      </field>
+    </record>
+
+    <!--Menu-->
+    <menuitem 
+      id="manufacturers_menu"
+      name="Manufacturers"
+      parent="stock.menu_product_in_config_stock"
+      sequence="25"
+      action="product_variants_bt.action_product_manufacturers"
+      groups="base.group_system,base.group_user,stock.group_stock_manager,stock.group_stock_user"
+    />
+  
+  </data>
+</odoo>
+
