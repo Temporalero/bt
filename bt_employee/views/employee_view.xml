@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+
+    <!--Inherith View from employee-->
+    <record id="inherit_view_employee_form" model="ir.ui.view">
+      <field name="name">inherit.hr.employee.form</field>
+      <field name="model">hr.employee</field>
+      <field name="inherit_id" ref="hr.view_employee_form" />
+      <field name="arch" type="xml">
+        <xpath expr="//page[@name='personal_information']/group[1]" position="inside">
+          <group name="salary" string="Salario">
+            <field name="daily_salary"/>
+            <field name="integrated_daily_wage"/>
+            <field name="monthly_salary"/>
+            <field name="business_name"/>
+          </group>
+        </xpath>
+      </field>
+    </record>
+
+  </data>
+</odoo>
