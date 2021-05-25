@@ -3,4 +3,15 @@ access_product_brand_group_system,product.brand.group.system,model_product_brand
 access_product_brand_group_user,product.brand.group.user,model_product_brand,base.group_user,1,0,0,0
 access_product_brand_group_stock_manager,product.brand.group_stock_manager,model_product_brand,stock.group_stock_manager,1,1,1,1
 access_product_brand_group_stock_user,product.brand.group_stock_user,model_product_brand,stock.group_stock_user,1,0,0,0
-
+access_product_season_group_system,product.season.group.system,model_product_season,base.group_system,1,1,1,1
+access_product_season_group_user,product.season.group.user,model_product_season,base.group_user,1,0,0,0
+access_product_season_group_stock_manager,product.season.group.stock.manager,model_product_season,stock.group_stock_manager,1,1,1,1
+access_product_season_group_stock_user,product.season.group.stock.user,model_product_season,stock.group_stock_user,1,0,0,0
+access_product_last_group_system,product.last.group.system,model_product_last,base.group_system,1,1,1,1
+access_product_last_group_user,product.last.group.user,model_product_last,base.group_user,1,0,0,0
+access_product_last_group_stock_manager,product.last.group.stock.manager,model_product_last,stock.group_stock_manager,1,1,1,1
+access_product_last_group_stock_user,product.last.group.stock.user,model_product_last,stock.group_stock_user,1,0,0,0
+access_product_style_group_system,product.style.group.system,model_product_style,base.group_system,1,1,1,1
+access_product_style_group_user,product.style.group.user,model_product_style,base.group_user,1,0,0,0
+access_product_style_group_stock_manager,product.style.group.stock.manager,model_product_style,stock.group_stock_manager,1,1,1,1
+access_product_style_group_stock_user,product.style.group.stock.user,model_product_style,stock.group_stock_user,1,0,0,0
