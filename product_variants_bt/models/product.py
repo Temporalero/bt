@@ -8,6 +8,34 @@ class ProductTemplate(models.Model):
     _inherit = 'product.template'
     _description = 'Product'
 
+
+    # type = fields.Selection(
+        # [
+            # ('consu', 'Consumable'),
+            # ('service', 'Service'),
+            # ('product', 'Storable')
+        # ],
+        # string='Product Type',
+        # default='product',
+        # required=True,
+        # help='A storable product is a product for which you manage stock. The Inventory app has to be installed.\n'
+             # 'A consumable product is a product for which stock is not managed.\n'
+             # 'A service is a non-material product you provide.')
+    product_line = fields.Selection(
+        [
+            ('accessories','Accessories'),
+            ('purse','Purse'),
+            ('footwear','Footwear'),
+            ('perfumes','Perfumes'),
+            ('clothing','Clothing'),
+        ],
+        string="Product Line",
+        required=True,
+        help="Product Line"
+    )
+    classification = fields.Char(
+        string="Classification"
+    )
     brand_id = fields.Many2one(
         'product.brand',
         string="Make",
@@ -25,5 +53,9 @@ class ProductTemplate(models.Model):
     style_id = fields.Many2one(
         'product.style',
         string="Style"
+    )
+    sole_id = fields.Many2one(
+        'product.sole',
+        string="Sole"
     )
 

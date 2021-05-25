@@ -6,7 +6,7 @@ from odoo import models, fields, api, _
 
 class ProductSeason(models.Model):
     _name = 'product.season'
-    _description = 'Season'
+    _description = 'Seasons'
     _rec_name = 'name'
     _order = 'name'
     
@@ -17,7 +17,7 @@ class ProductSeason(models.Model):
 
 class Productlast(models.Model):
     _name = 'product.last'
-    _description = 'Last'
+    _description = 'Lasts'
     _rec_name = 'name'
     _order = 'name'
     
@@ -28,7 +28,18 @@ class Productlast(models.Model):
 
 class ProductStyle(models.Model):
     _name = 'product.style'
-    _description = 'Style'
+    _description = 'Styles'
+    _rec_name = 'name'
+    _order = 'name'
+    
+    name = fields.Char(
+        string="Name"
+    )
+
+
+class ProductSole(models.Model):
+    _name = 'product.sole'
+    _description = 'Soles'
     _rec_name = 'name'
     _order = 'name'
     
