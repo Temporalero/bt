@@ -13,4 +13,17 @@ class ProductTemplate(models.Model):
         string="Make",
         help="Manufacturers"
     )
+    season_id = fields.Many2one(
+        'product.season',
+        string="Season",
+        help="Season in which the product was launched"
+    )
+    last_id = fields.Many2one(
+        'product.last',
+        string="Last"
+    )
+    style_id = fields.Many2one(
+        'product.style',
+        string="Style"
+    )
 
