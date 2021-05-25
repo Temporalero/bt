@@ -55,7 +55,7 @@
 
     <!--view tree of Manufacturers-->
     <record id="view_product_manufacturers_tree" model="ir.ui.view">
-      <field name="name">product.brand.form</field>
+      <field name="name">product.brand.tree</field>
       <field name="model">product.brand</field>
       <field name="type">tree</field>
       <field name="arch" type="xml">
@@ -86,7 +86,7 @@
       parent="stock.menu_product_in_config_stock"
       sequence="25"
       action="product_variants_bt.action_product_manufacturers"
-      groups="base.group_system,base.group_user,stock.group_stock_manager,stock.group_stock_user"
+      groups="base.group_system,stock.group_stock_manager"
     />
   
   </data>

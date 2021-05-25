@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+
+    <!--view tree of Last-->
+    <record id="view_product_last_tree" model="ir.ui.view">
+      <field name="name">product.last.tree</field>
+      <field name="model">product.last</field>
+      <field name="type">tree</field>
+      <field name="arch" type="xml">
+        <tree string="Lasts" editable="bottom">
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+
+    <!--Action Last-->
+    <record id="action_product_last" model="ir.actions.act_window">
+      <field name="name">Lasts</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">product.last</field>
+      <field name="view_mode">tree</field>
+      <field name="view_id" ref="product_variants_bt.view_product_last_tree" />
+      <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">
+            Create New Last
+        </p>
+      </field>
+    </record>
+
+    <!--Menu-->
+    <menuitem 
+      id="last_menu"
+      name="Lasts"
+      parent="stock.menu_product_in_config_stock"
+      sequence="27"
+      action="product_variants_bt.action_product_last"
+      groups="base.group_system,stock.group_stock_manager"
+    />
+  
+  </data>
+</odoo>
+
+
+

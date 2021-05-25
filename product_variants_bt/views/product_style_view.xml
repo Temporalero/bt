@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+
+    <!--view tree of Style-->
+    <record id="view_product_style_tree" model="ir.ui.view">
+      <field name="name">product.style.tree</field>
+      <field name="model">product.style</field>
+      <field name="type">tree</field>
+      <field name="arch" type="xml">
+        <tree string="Styles" editable="bottom">
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+
+    <!--Action Style-->
+    <record id="action_product_style" model="ir.actions.act_window">
+      <field name="name">Styles</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">product.style</field>
+      <field name="view_mode">tree</field>
+      <field name="view_id" ref="product_variants_bt.view_product_style_tree" />
+      <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">
+            Create New Style
+        </p>
+      </field>
+    </record>
+
+    <!--Menu-->
+    <menuitem 
+      id="style_menu"
+      name="Styles"
+      parent="stock.menu_product_in_config_stock"
+      sequence="26"
+      action="product_variants_bt.action_product_style"
+      groups="base.group_system,stock.group_stock_manager"
+    />
+  
+  </data>
+</odoo>
+
+

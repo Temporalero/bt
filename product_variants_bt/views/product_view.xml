@@ -8,12 +8,27 @@
       <field name="model">product.template</field>
       <field name="inherit_id" ref="product.product_template_form_view" />
       <field name="arch" type="xml">
-        <field name="categ_id" position="after">
-          <field name="brand_id" placeholder="Select" />
-          <field name="season_id" placeholder="Select"/>
-          <field name="last_id" placeholder="Select"/>
-          <field name="style_id" placeholder="Select"/>
-        </field>
+        <page name="general_information" position="after">
+          <page name="addition_information" string="Additional Information">
+            <group>
+              <group>
+                <field name="product_line" placeholder="Select" />
+                <field name="brand_id" placeholder="Select" />
+                <field name="style_id" placeholder="Select"/>
+                <field name="classification" placeholder="Select" />
+                <field name="season_id" placeholder="Select" 
+                  attrs="{'invisible': [('product_line', '=', 'perfumes')]}"  
+                />
+                <field name="last_id" placeholder="Select"
+                  attrs="{'invisible': [('product_line', '!=', 'footwear')]}"  
+                />
+                <field name="sole_id" placeholder="Select"
+                  attrs="{'invisible': [('product_line', '!=', 'footwear')]}"  
+                />
+              </group>
+            </group>
+          </page>
+        </page>
       </field>
     </record>
 
