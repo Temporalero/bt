@@ -58,4 +58,12 @@ class ProductTemplate(models.Model):
         'product.sole',
         string="Sole"
     )
+    base_color_id = fields.Many2one(
+        'product.base.color',
+        string="Base Color"
+    )
+    base_finish_id = fields.Many2one(
+        'product.base.finish',
+        string="Base finish"
+    )
 

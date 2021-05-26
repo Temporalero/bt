@@ -17,5 +17,13 @@ access_product_style_group_stock_manager,product.style.group.stock.manager,model
 access_product_style_group_stock_user,product.style.group.stock.user,model_product_style,stock.group_stock_user,1,0,0,0
 access_product_sole_group_system,product.sole.group.system,model_product_sole,base.group_system,1,1,1,1
 access_product_sole_group_user,product.sole.group.user,model_product_sole,base.group_user,1,0,0,0
-access_product_sole_group_stock_manager,product.solw.group.stock.manager,model_product_sole,stock.group_stock_manager,1,1,1,1
+access_product_sole_group_stock_manager,product.sole.group.stock.manager,model_product_sole,stock.group_stock_manager,1,1,1,1
 access_product_sole_group_stock_user,product.sole.group.stock.user,model_product_sole,stock.group_stock_user,1,0,0,0
+access_product_b_color_group_system,product.base.color.group.system,model_product_base_color,base.group_system,1,1,1,1
+access_product_b_color_group_user,product.base.color.group.user,model_product_base_color,base.group_user,1,0,0,0
+access_product_b_color_group_stock_manager,product.base.color.group.stock.manager,model_product_base_color,stock.group_stock_manager,1,1,1,1
+access_product_b_color_group_stock_user,product.base.color.group.stock.user,model_product_base_color,stock.group_stock_user,1,0,0,0
+access_product_b_finish_group_system,product.base.finish.group.system,model_product_base_finish,base.group_system,1,1,1,1
+access_product_b_finish_group_user,product.base.finish.group.user,model_product_base_finish,base.group_user,1,0,0,0
+access_product_b_finish_group_stock_manager,product.base.finish.group.stock.manager,model_product_base_finish,stock.group_stock_manager,1,1,1,1
+access_product_b_finish_group_stock_user,product.base.finish.group.stock.user,model_product_base_finish,stock.group_stock_user,1,0,0,0

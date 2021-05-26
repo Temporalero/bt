@@ -25,6 +25,8 @@
                 <field name="sole_id" placeholder="Select"
                   attrs="{'invisible': [('product_line', '!=', 'footwear')]}"  
                 />
+                <field name="base_color_id" placeholder="Select" />
+                <field name="base_finish_id" placeholder="Select" />
               </group>
             </group>
           </page>
