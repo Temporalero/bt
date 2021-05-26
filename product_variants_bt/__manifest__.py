@@ -21,6 +21,8 @@
         'views/product_season_view.xml',
         'views/product_style_view.xml',
         'views/product_last_view.xml',
+        'views/product_base_color_view.xml',
+        'views/product_base_finish_view.xml',
         'views/product_soles_view.xml',
         'views/product_view.xml',
     ],

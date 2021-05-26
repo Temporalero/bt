@@ -46,3 +46,25 @@ class ProductSole(models.Model):
     name = fields.Char(
         string="Name"
     )
+
+
+class ProductBaseColor(models.Model):
+    _name = 'product.base.color'
+    _description = 'Base Color'
+    _rec_name = 'name'
+    _order = 'name'
+    
+    name = fields.Char(
+        string="Name"
+    )
+
+
+class ProductBaseFinish(models.Model):
+    _name = 'product.base.finish'
+    _description = 'Base Finish'
+    _rec_name = 'name'
+    _order = 'name'
+    
+    name = fields.Char(
+        string="Name"
+    )
