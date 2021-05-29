@@ -12,10 +12,15 @@
           <page name="addition_information" string="Additional Information">
             <group>
               <group>
+                <field name="family_id" placeholder="Select" />
                 <field name="product_line" placeholder="Select" />
                 <field name="brand_id" placeholder="Select" />
+                <field name="base_color_id" placeholder="Select" />
+                <field name="base_finish_id" placeholder="Select" />
+              </group>
+              <group>
                 <field name="style_id" placeholder="Select"/>
-                <field name="classification" placeholder="Select" />
+                <field name="classification_id" placeholder="Select" />
                 <field name="season_id" placeholder="Select" 
                   attrs="{'invisible': [('product_line', '=', 'perfumes')]}"  
                 />
@@ -25,8 +30,6 @@
                 <field name="sole_id" placeholder="Select"
                   attrs="{'invisible': [('product_line', '!=', 'footwear')]}"  
                 />
-                <field name="base_color_id" placeholder="Select" />
-                <field name="base_finish_id" placeholder="Select" />
               </group>
             </group>
           </page>
