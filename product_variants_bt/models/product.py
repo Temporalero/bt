@@ -33,7 +33,8 @@ class ProductTemplate(models.Model):
         required=True,
         help="Product Line"
     )
-    classification = fields.Char(
+    classification_id = fields.Many2one(
+        'product.classification',
         string="Classification"
     )
     brand_id = fields.Many2one(
@@ -65,5 +66,9 @@ class ProductTemplate(models.Model):
     base_finish_id = fields.Many2one(
         'product.base.finish',
         string="Base finish"
+    )
+    family_id = fields.Many2one(
+        'product.family',
+        string="Family"
     )
 

@@ -12,4 +12,6 @@ class ProductBrand(models.Model):
 
     name = fields.Char(string="Make", required=True)
     image = fields.Image(string="Logo", max_width=128, max_height=128)
+    abbreviation = fields.Char(string="Abbreviation", required=True, size=5)
+    active = fields.Boolean(string="Active.?", default=True)
 

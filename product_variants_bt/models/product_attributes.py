@@ -68,3 +68,25 @@ class ProductBaseFinish(models.Model):
     name = fields.Char(
         string="Name"
     )
+
+
+class ProductClassification(models.Model):
+    _name = 'product.classification'
+    _description = 'Product Classification'
+    _rec_name = 'name'
+    _order = 'name'
+    
+    name = fields.Char(
+        string="Name"
+    )
+
+
+class ProductFamily(models.Model):
+    _name = 'product.family'
+    _description = 'Product Family'
+    _rec_name = 'name'
+    _order = 'name'
+    
+    name = fields.Char(
+        string="Name"
+    )
