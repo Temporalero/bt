@@ -3,3 +3,7 @@ acs_product_color_group_system,product.color.group.system,model_product_color,ba
 acs_product_color_group_user,product.color.group.user,model_product_color,base.group_user,1,0,0,0
 acs_product_color_group_stock_manager,product.color.group.stock.manager,model_product_color,stock.group_stock_manager,1,1,1,1
 acs_product_color_group_stock_user,product.color.group.stock.user,model_product_color,stock.group_stock_user,1,0,0,0
+access_product_b_color_group_system,product.base.color.group.system,model_product_base_color,base.group_system,1,1,1,1
+access_product_b_color_group_user,product.base.color.group.user,model_product_base_color,base.group_user,1,0,0,0
+access_product_b_color_group_stock_manager,product.base.color.group.stock.manager,model_product_base_color,stock.group_stock_manager,1,1,1,1
+access_product_b_color_group_stock_user,product.base.color.group.stock.user,model_product_base_color,stock.group_stock_user,1,0,0,0

@@ -60,7 +60,7 @@ class ProductTemplate(models.Model):
         'product.sole',
         string="Sole"
     )
-    base_color_id = fields.Many2one(
+    color_id = fields.Many2one(
         'product.color',
         string="Base Color"
     )
@@ -99,4 +99,7 @@ class ProductTemplate(models.Model):
     )
 
 
-
+    base_color_id = fields.Many2one(
+            'product.base.color',
+            string="Base Color"
+        )

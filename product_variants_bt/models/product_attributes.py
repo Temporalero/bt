@@ -11,7 +11,8 @@ class ProductSeason(models.Model):
     _order = 'name'
     
     name = fields.Char(
-        string="Name"
+        string="Name",
+        required=True
     )
 
 
@@ -22,7 +23,8 @@ class Productlast(models.Model):
     _order = 'name'
     
     name = fields.Char(
-        string="Name"
+        string="Name",
+        required=True
     )
 
 
@@ -33,7 +35,8 @@ class ProductStyle(models.Model):
     _order = 'name'
     
     name = fields.Char(
-        string="Name"
+        string="Name",
+        required=True
     )
 
 
@@ -44,7 +47,8 @@ class ProductSole(models.Model):
     _order = 'name'
     
     name = fields.Char(
-        string="Name"
+        string="Name",
+        required=True
     )
 
 
@@ -55,7 +59,8 @@ class ProductColor(models.Model):
     _order = 'name'
     
     name = fields.Char(
-        string="Name"
+        string="Name",
+        required=True
     )
 
 
@@ -66,7 +71,8 @@ class ProductBaseFinish(models.Model):
     _order = 'name'
     
     name = fields.Char(
-        string="Name"
+        string="Name",
+        required=True
     )
 
 
@@ -77,7 +83,8 @@ class ProductClassification(models.Model):
     _order = 'name'
     
     name = fields.Char(
-        string="Name"
+        string="Name",
+        required=True
     )
 
 
@@ -88,7 +95,8 @@ class ProductFamily(models.Model):
     _order = 'name'
     
     name = fields.Char(
-        string="Name"
+        string="Name",
+        required=True
     )
 
 
@@ -99,7 +107,8 @@ class ProductStencil(models.Model):
     _order = 'name'
     
     name = fields.Char(
-        string="Name"
+        string="Name",
+        required=True
     )
     
 
@@ -110,7 +119,8 @@ class ProductLinig(models.Model):
     _order = 'name'
     
     name = fields.Char(
-        string="Name"
+        string="Name",
+        required=True
     )
 
 
@@ -120,6 +130,17 @@ class ProductUpper(models.Model):
     _rec_name = 'name'
     _order = 'name'
     
+    name = fields.Char(
+        string="Name",
+        required=True
+    )
+
+class ProductBaseColor(models.Model):
+    _name = 'product.base.color'
+    _description = 'Base Color'
+    _rec_name = 'name'
+    _order = 'name'
+
     name = fields.Char(
         string="Name"
     )
