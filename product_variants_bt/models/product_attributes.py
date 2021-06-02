@@ -134,13 +134,3 @@ class ProductUpper(models.Model):
         string="Name",
         required=True
     )
-
-class ProductBaseColor(models.Model):
-    _name = 'product.base.color'
-    _description = 'Base Color'
-    _rec_name = 'name'
-    _order = 'name'
-
-    name = fields.Char(
-        string="Name"
-    )
