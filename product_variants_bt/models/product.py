@@ -40,6 +40,7 @@ class ProductTemplate(models.Model):
     brand_id = fields.Many2one(
         'product.brand',
         string="Make",
+        required=True,
         help="Manufacturers"
     )
     season_id = fields.Many2one(
@@ -60,7 +61,7 @@ class ProductTemplate(models.Model):
         string="Sole"
     )
     base_color_id = fields.Many2one(
-        'product.base.color',
+        'product.color',
         string="Base Color"
     )
     base_finish_id = fields.Many2one(
@@ -69,6 +70,33 @@ class ProductTemplate(models.Model):
     )
     family_id = fields.Many2one(
         'product.family',
+        required=True,
         string="Family"
     )
+    edge_color_id = fields.Many2one(
+        'product.color',
+        string="Edge Color"
+    )
+    stencil_id = fields.Many2one(
+        'product.stencil',
+        string="Template"
+    )
+    height = fields.Integer(
+        string="Height"
+    )
+    logo_color = fields.Selection(
+        [('golder', 'Golder'), ('silver', 'Silver')],
+        string="Logo Color",
+        help="Template Logo Color"
+    )
+    lining_id = fields.Many2one(
+        'product.lining',
+        string="Linig"
+    )
+    upper_id = fields.Many2one(
+        'product.upper',
+        string="Upper"
+    )
+
+
 

@@ -48,9 +48,9 @@ class ProductSole(models.Model):
     )
 
 
-class ProductBaseColor(models.Model):
-    _name = 'product.base.color'
-    _description = 'Base Color'
+class ProductColor(models.Model):
+    _name = 'product.color'
+    _description = 'Colors'
     _rec_name = 'name'
     _order = 'name'
     
@@ -84,6 +84,39 @@ class ProductClassification(models.Model):
 class ProductFamily(models.Model):
     _name = 'product.family'
     _description = 'Product Family'
+    _rec_name = 'name'
+    _order = 'name'
+    
+    name = fields.Char(
+        string="Name"
+    )
+
+
+class ProductStencil(models.Model):
+    _name = 'product.stencil'
+    _description = 'Product Stencil'
+    _rec_name = 'name'
+    _order = 'name'
+    
+    name = fields.Char(
+        string="Name"
+    )
+    
+
+class ProductLinig(models.Model):
+    _name = 'product.lining'
+    _description = 'Product Linig'
+    _rec_name = 'name'
+    _order = 'name'
+    
+    name = fields.Char(
+        string="Name"
+    )
+
+
+class ProductUpper(models.Model):
+    _name = 'product.upper'
+    _description = 'Product Upper'
     _rec_name = 'name'
     _order = 'name'
     
