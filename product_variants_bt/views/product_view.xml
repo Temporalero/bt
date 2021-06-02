@@ -16,6 +16,7 @@
                 <field name="product_line" placeholder="Select" />
                 <field name="brand_id" placeholder="Select" />
                 <field name="classification_id" placeholder="Select" />
+                <field name="color_id" placeholder="Select" />
                 <field name="base_color_id" placeholder="Select" />
                 <field name="base_finish_id" placeholder="Select" />
                 <field name="edge_color_id" placeholder="Select" />

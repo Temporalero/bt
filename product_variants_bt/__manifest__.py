@@ -41,6 +41,7 @@
         'views/product_style_view.xml',
         'views/product_upper_view.xml',
         'views/product_view.xml',
+        'views/product_base_color_view.xml',
     ],
     'demo': [],
     'qweb': [],
