@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+
+    <!--view tree of Stencil-->
+    <record id="view_product_stencil_tree" model="ir.ui.view">
+      <field name="name">product.stencil.tree</field>
+      <field name="model">product.stencil</field>
+      <field name="type">tree</field>
+      <field name="arch" type="xml">
+        <tree string="Stencil" editable="bottom">
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+
+    <!--Action Stencil-->
+    <record id="action_product_stencil" model="ir.actions.act_window">
+      <field name="name">Stencil</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">product.stencil</field>
+      <field name="view_mode">tree</field>
+      <field name="view_id" ref="product_variants_bt.view_product_stencil_tree" />
+      <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">
+            Create New Stencil
+        </p>
+      </field>
+    </record>
+
+    <!--Menu-->
+    <menuitem 
+      id="stencil_menu"
+      name="Stencil"
+      parent="stock.menu_product_in_config_stock"
+      sequence="34"
+      action="product_variants_bt.action_product_stencil"
+      groups="base.group_system,stock.group_stock_manager"
+    />
+  
+  </data>
+</odoo>
+
+
+

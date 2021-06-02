@@ -1,0 +1,5 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+acs_product_style_group_system,product.style.group.system,model_product_style,base.group_system,1,1,1,1
+acs_product_style_group_user,product.style.group.user,model_product_style,base.group_user,1,0,0,0
+acs_product_style_group_stock_manager,product.style.group.stock.manager,model_product_style,stock.group_stock_manager,1,1,1,1
+acs_product_style_group_stock_user,product.style.group.stock.user,model_product_style,stock.group_stock_user,1,0,0,0

@@ -15,19 +15,35 @@
                 <field name="family_id" placeholder="Select" />
                 <field name="product_line" placeholder="Select" />
                 <field name="brand_id" placeholder="Select" />
+                <field name="classification_id" placeholder="Select" />
                 <field name="base_color_id" placeholder="Select" />
                 <field name="base_finish_id" placeholder="Select" />
-              </group>
-              <group>
+                <field name="edge_color_id" placeholder="Select" />
                 <field name="style_id" placeholder="Select"/>
-                <field name="classification_id" placeholder="Select" />
                 <field name="season_id" placeholder="Select" 
                   attrs="{'invisible': [('product_line', '=', 'perfumes')]}"  
                 />
+              </group>
+              <group>
                 <field name="last_id" placeholder="Select"
                   attrs="{'invisible': [('product_line', '!=', 'footwear')]}"  
                 />
                 <field name="sole_id" placeholder="Select"
+                  attrs="{'invisible': [('product_line', '!=', 'footwear')]}"  
+                />
+                <field name="stencil_id" placeholder="Select"
+                  attrs="{'invisible': [('product_line', '!=', 'footwear')]}"  
+                />
+                <field name="height" placeholder="Select"
+                  attrs="{'invisible': [('product_line', '!=', 'footwear')]}"  
+                />
+                <field name="logo_color" placeholder="Select"
+                  attrs="{'invisible': [('product_line', '!=', 'footwear')]}"  
+                />
+                <field name="lining_id" placeholder="Select"
+                  attrs="{'invisible': [('product_line', '!=', 'footwear')]}"  
+                />
+                <field name="upper_id" placeholder="Select"
                   attrs="{'invisible': [('product_line', '!=', 'footwear')]}"  
                 />
               </group>

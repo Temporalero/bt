@@ -1,0 +1,5 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+acs_product_lining_group_system,product.lining.group.system,model_product_lining,base.group_system,1,1,1,1
+acs_product_lining_group_user,product.lining.group.user,model_product_lining,base.group_user,1,0,0,0
+acs_product_lining_group_stock_manager,product.lining.group.stock.manager,model_product_lining,stock.group_stock_manager,1,1,1,1
+acs_product_lining_group_stock_user,product.lining.group.stock.user,model_product_lining,stock.group_stock_user,1,0,0,0
