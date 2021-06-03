@@ -15,3 +15,10 @@ class ProductBrand(models.Model):
     abbreviation = fields.Char(string="Abbreviation", required=True, size=5)
     active = fields.Boolean(string="Active.?", default=True)
 
+
+    _sql_constraints = [
+        ('name_uniq', 'unique (name)',
+        'El nombre de la marca que intenta registrar ya existe.'),
+        ('abbre_uniq', 'unique (abbreviation)',
+        'La Abreviatura de la marca que intenta registrar ya existe.'),
+    ]

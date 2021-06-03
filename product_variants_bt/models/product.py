@@ -9,18 +9,6 @@ class ProductTemplate(models.Model):
     _description = 'Product'
 
 
-    # type = fields.Selection(
-        # [
-            # ('consu', 'Consumable'),
-            # ('service', 'Service'),
-            # ('product', 'Storable')
-        # ],
-        # string='Product Type',
-        # default='product',
-        # required=True,
-        # help='A storable product is a product for which you manage stock. The Inventory app has to be installed.\n'
-             # 'A consumable product is a product for which stock is not managed.\n'
-             # 'A service is a non-material product you provide.')
     product_line = fields.Selection(
         [
             ('accessories','Accessories'),
@@ -35,51 +23,62 @@ class ProductTemplate(models.Model):
     )
     classification_id = fields.Many2one(
         'product.classification',
+        ondelete='restrict',
         string="Classification"
     )
     brand_id = fields.Many2one(
         'product.brand',
         string="Make",
         required=True,
+        ondelete='restrict',
         help="Manufacturers"
     )
     season_id = fields.Many2one(
         'product.season',
         string="Season",
+        ondelete='restrict',
         help="Season in which the product was launched"
     )
     last_id = fields.Many2one(
         'product.last',
-        string="Last"
+        string="Last",
+        ondelete='restrict'
     )
     style_id = fields.Many2one(
         'product.style',
-        string="Style"
+        string="Style",
+        ondelete='restrict'
     )
     sole_id = fields.Many2one(
         'product.sole',
-        string="Sole"
+        string="Sole",
+        ondelete='restrict'
     )
     base_color_id = fields.Many2one(
         'product.color',
-        string="Base Color"
+        string="Base Color",
+        ondelete='restrict'
     )
     base_finish_id = fields.Many2one(
         'product.base.finish',
-        string="Base finish"
+        string="Base finish",
+        ondelete='restrict'
     )
     family_id = fields.Many2one(
         'product.family',
+        string="Family",
         required=True,
-        string="Family"
+        ondelete='restrict'
     )
     edge_color_id = fields.Many2one(
         'product.color',
-        string="Edge Color"
+        string="Edge Color",
+        ondelete='restrict'
     )
     stencil_id = fields.Many2one(
         'product.stencil',
-        string="Template"
+        string="Template",
+        ondelete='restrict'
     )
     height = fields.Integer(
         string="Height"
@@ -91,10 +90,12 @@ class ProductTemplate(models.Model):
     )
     lining_id = fields.Many2one(
         'product.lining',
-        string="Linig"
+        string="Linig",
+        ondelete='restrict'
     )
     upper_id = fields.Many2one(
         'product.upper',
-        string="Upper"
+        string="Upper",
+        ondelete='restrict'
     )
 

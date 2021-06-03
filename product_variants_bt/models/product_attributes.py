@@ -15,6 +15,11 @@ class ProductSeason(models.Model):
         required=True
     )
 
+    _sql_constraints = [
+        ('name_uniq', 'unique (name)',
+        'El nombre de la Temporada que intenta registrar ya existe.'),
+    ]
+
 
 class Productlast(models.Model):
     _name = 'product.last'
@@ -27,6 +32,11 @@ class Productlast(models.Model):
         required=True
     )
 
+    _sql_constraints = [
+        ('name_uniq', 'unique (name)',
+        'El nombre de la Horma que intenta registrar ya existe.'),
+    ]
+
 
 class ProductStyle(models.Model):
     _name = 'product.style'
@@ -38,6 +48,11 @@ class ProductStyle(models.Model):
         string="Name",
         required=True
     )
+    
+    _sql_constraints = [
+        ('name_uniq', 'unique (name)',
+        'El nombre de la Temporada que intenta registrar ya existe.'),
+    ]
 
 
 class ProductSole(models.Model):
@@ -51,6 +66,11 @@ class ProductSole(models.Model):
         required=True
     )
 
+    _sql_constraints = [
+        ('name_uniq', 'unique (name)',
+        'El nombre de la Suela que intenta registrar ya existe.'),
+    ]
+
 
 class ProductColor(models.Model):
     _name = 'product.color'
@@ -62,6 +82,11 @@ class ProductColor(models.Model):
         string="Name",
         required=True
     )
+
+    _sql_constraints = [
+        ('name_uniq', 'unique (name)',
+        'El nombre del Color que intenta registrar ya existe.'),
+    ]
 
 
 class ProductBaseFinish(models.Model):
@@ -75,6 +100,11 @@ class ProductBaseFinish(models.Model):
         required=True
     )
 
+    _sql_constraints = [
+        ('name_uniq', 'unique (name)',
+        'El nombre del Acabado Base que intenta registrar ya existe.'),
+    ]
+
 
 class ProductClassification(models.Model):
     _name = 'product.classification'
@@ -86,6 +116,11 @@ class ProductClassification(models.Model):
         string="Name",
         required=True
     )
+
+    _sql_constraints = [
+        ('name_uniq', 'unique (name)',
+        'El nombre de la Clasificación que intenta registrar ya existe.'),
+    ]
 
 
 class ProductFamily(models.Model):
@@ -99,6 +134,11 @@ class ProductFamily(models.Model):
         required=True
     )
 
+    _sql_constraints = [
+        ('name_uniq', 'unique (name)',
+        'El nombre de la Familia que intenta registrar ya existe.'),
+    ]
+
 
 class ProductStencil(models.Model):
     _name = 'product.stencil'
@@ -110,6 +150,11 @@ class ProductStencil(models.Model):
         string="Name",
         required=True
     )
+
+    _sql_constraints = [
+        ('name_uniq', 'unique (name)',
+        'El nombre de la Plantilla que intenta registrar ya existe.'),
+    ]
     
 
 class ProductLinig(models.Model):
@@ -122,6 +167,11 @@ class ProductLinig(models.Model):
         string="Name",
         required=True
     )
+    
+    _sql_constraints = [
+        ('name_uniq', 'unique (name)',
+        'El nombre del Recubrimiento que intenta registrar ya existe.'),
+    ]
 
 
 class ProductUpper(models.Model):
@@ -134,3 +184,12 @@ class ProductUpper(models.Model):
         string="Name",
         required=True
     )
+
+    _sql_constraints = [
+        ('name_uniq', 'unique (name)',
+        'El Nombre que intenta registrar ya existe.'),
+    ]
+
+
+
+
