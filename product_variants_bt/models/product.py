@@ -98,4 +98,3 @@ class ProductTemplate(models.Model):
         string="Upper",
         ondelete='restrict'
     )
-

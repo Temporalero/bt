@@ -9,7 +9,7 @@ class ProductSeason(models.Model):
     _description = 'Seasons'
     _rec_name = 'name'
     _order = 'name'
-    
+
     name = fields.Char(
         string="Name",
         required=True
@@ -26,7 +26,7 @@ class Productlast(models.Model):
     _description = 'Lasts'
     _rec_name = 'name'
     _order = 'name'
-    
+
     name = fields.Char(
         string="Name",
         required=True
@@ -43,12 +43,12 @@ class ProductStyle(models.Model):
     _description = 'Styles'
     _rec_name = 'name'
     _order = 'name'
-    
+
     name = fields.Char(
         string="Name",
         required=True
     )
-    
+
     _sql_constraints = [
         ('name_uniq', 'unique (name)',
         'El nombre de la Temporada que intenta registrar ya existe.'),
@@ -60,7 +60,7 @@ class ProductSole(models.Model):
     _description = 'Soles'
     _rec_name = 'name'
     _order = 'name'
-    
+
     name = fields.Char(
         string="Name",
         required=True
@@ -77,7 +77,7 @@ class ProductColor(models.Model):
     _description = 'Colors'
     _rec_name = 'name'
     _order = 'name'
-    
+
     name = fields.Char(
         string="Name",
         required=True
@@ -94,7 +94,7 @@ class ProductBaseFinish(models.Model):
     _description = 'Base Finish'
     _rec_name = 'name'
     _order = 'name'
-    
+
     name = fields.Char(
         string="Name",
         required=True
@@ -111,7 +111,7 @@ class ProductClassification(models.Model):
     _description = 'Product Classification'
     _rec_name = 'name'
     _order = 'name'
-    
+
     name = fields.Char(
         string="Name",
         required=True
@@ -128,7 +128,7 @@ class ProductFamily(models.Model):
     _description = 'Product Family'
     _rec_name = 'name'
     _order = 'name'
-    
+
     name = fields.Char(
         string="Name",
         required=True
@@ -145,7 +145,7 @@ class ProductStencil(models.Model):
     _description = 'Product Stencil'
     _rec_name = 'name'
     _order = 'name'
-    
+
     name = fields.Char(
         string="Name",
         required=True
@@ -155,19 +155,19 @@ class ProductStencil(models.Model):
         ('name_uniq', 'unique (name)',
         'El nombre de la Plantilla que intenta registrar ya existe.'),
     ]
-    
+
 
 class ProductLinig(models.Model):
     _name = 'product.lining'
     _description = 'Product Linig'
     _rec_name = 'name'
     _order = 'name'
-    
+
     name = fields.Char(
         string="Name",
         required=True
     )
-    
+
     _sql_constraints = [
         ('name_uniq', 'unique (name)',
         'El nombre del Recubrimiento que intenta registrar ya existe.'),
@@ -179,7 +179,7 @@ class ProductUpper(models.Model):
     _description = 'Product Upper'
     _rec_name = 'name'
     _order = 'name'
-    
+
     name = fields.Char(
         string="Name",
         required=True
@@ -189,7 +189,3 @@ class ProductUpper(models.Model):
         ('name_uniq', 'unique (name)',
         'El Nombre que intenta registrar ya existe.'),
     ]
-
-
-
-
