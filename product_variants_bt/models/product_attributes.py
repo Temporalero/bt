@@ -142,7 +142,7 @@ class ProductFamily(models.Model):
 
 class ProductStencil(models.Model):
     _name = 'product.stencil'
-    _description = 'Product Stencil'
+    _description = 'Product Template'
     _rec_name = 'name'
     _order = 'name'
 
