@@ -51,7 +51,7 @@ class ProductStyle(models.Model):
 
     _sql_constraints = [
         ('name_uniq', 'unique (name)',
-        'El nombre de la Temporada que intenta registrar ya existe.'),
+        'El nombre del Estilo que intenta registrar ya existe.'),
     ]
 
 

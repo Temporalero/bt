@@ -22,3 +22,4 @@ class ProductBrand(models.Model):
         ('abbre_uniq', 'unique (abbreviation)',
         'La Abreviatura de la marca que intenta registrar ya existe.'),
     ]
+
