@@ -3,12 +3,38 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from odoo import models, fields, api, _
+import random
+import logging
+_logger = logging.getLogger(__name__)
 
 class ProductTemplate(models.Model):
     _inherit = 'product.template'
     _description = 'Product'
 
 
+
+    @api.depends('brand_id', 'default_code')
+    def _compute_reference(self):
+        make = self.brand_id
+        product = False
+        if make and not self.default_code:
+            while product == False:
+                number = random.randint(100000, 999999)
+                code = str(make.abbreviation) + str(number)
+                product = self.env['product.template'].search(
+                    [('default_code', '=', code)]
+                )
+                if not product:
+                    self.default_code = code
+                else:
+                    product = False
+
+
+
+    default_code = fields.Char(
+        string="Referencia Interna",
+        compute=_compute_reference
+    )
     product_line = fields.Selection(
         [
             ('accessories','Accessories'),
@@ -98,3 +124,5 @@ class ProductTemplate(models.Model):
         string="Upper",
         ondelete='restrict'
     )
+
+
