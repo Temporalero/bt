@@ -66,7 +66,6 @@
         <tree string="Model Make">
           <field name="name"/>
           <field name="abbreviation"/>
-          <field name="count" />
           <field name="active"/>
         </tree>
       </field>
