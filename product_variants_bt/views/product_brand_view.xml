@@ -24,7 +24,6 @@
                     </a>
                   </h4>
                   <span><field name="abbreviation" /></span>
-                  <span><field name="count" /></span>
                 </div>
               </div>
             </t>
