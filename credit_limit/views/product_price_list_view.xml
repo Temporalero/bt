@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    
+    <record id="inherit_product_pricelist_item_form_view" model="ir.ui.view">
+      <field name="name">inherit.product.pricelist.item.form</field>
+      <field name="model">product.pricelist.item</field>
+      <field name="inherit_id" ref="product.product_pricelist_item_form_view" />
+      <field name="arch" type="xml">
+        <field name="base" position="before">
+          <label for="credit_limit" attrs="{'invisible':[('compute_price', '!=', 'percentage')]}"/>
+          <div attrs="{'invisible':[('compute_price', '!=', 'percentage')]}">
+              <field name="credit_limit"
+                class="oe_inline"
+                attrs="{'invisible':[('compute_price', '!=', 'percentage')]}"/>
+          </div>
+        </field>
+      </field>
+    </record>
+
+  </data>
+</odoo>
