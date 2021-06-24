@@ -8,14 +8,14 @@ class SaleOrder(models.Model):
     _inherit = 'sale.order'
 
 
-    @api.model
-    def create(self, vals):
-        res = super(SaleOrder, self).create(vals)
+    # @api.model
+    # def create(self, vals):
+        # res = super(SaleOrder, self).create(vals)
 
-        return res
+        # return res
 
 
-    def write(self, vals):
-        res = super(SaleOrder, self).write(vals)
+    # def write(self, vals):
+        # res = super(SaleOrder, self).write(vals)
 
-        return res
+        # return res
