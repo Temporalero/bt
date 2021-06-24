@@ -10,6 +10,7 @@ class ProductPriceList(models.Model):
 
     credit_limit = fields.Float(
         string="Credid Limit",
-        digits=(12,2)
+        digits=(12,2),
+        help="Credit limit for rate"
     )
 
