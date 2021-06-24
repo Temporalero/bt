@@ -9,7 +9,7 @@
     'summary': "products variants",
     'sequence': 10,
     'description': "Variantes de Productos",
-    'category': "mail",
+    'category': "Product",
     'depends': [
         'base',
         'product',
