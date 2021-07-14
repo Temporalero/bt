@@ -37,19 +37,33 @@ class SaleOrder(models.Model):
         amount = 0
         credit = 0
         partner = None
-        partner_id = vals.get('partner_id')
-        partner = self.env['res.partner'].browse([partner_id])
-        total_balance = self.env['account.move'].search([
-            ('partner_id', '=', partner_id),
-            ('amount_residual_signed', '>', 0),
-        ])
-        if self.amount_total > partner.credit_limit:
-            raise UserError('El Pedido Supera el Limite de Credito del Cliente')
-        elif total_balance != '' or total_balance != False or total_balance != None:
-            for balance in total_balance:
-                amount += balance.amount_residual_signed
-            credit = partner.credit_limit - amount
-            if self.amount_total > credit:
+        if vals.get('partner_id'):
+            partner_id = vals.get('partner_id')
+            partner = self.env['res.partner'].browse([partner_id])
+            total_balance = self.env['account.move'].search([
+                ('partner_id', '=', partner_id),
+                ('amount_residual_signed', '>', 0),
+            ])
+            if self.amount_total > partner.credit_limit:
                 raise UserError('El Pedido Supera el Limite de Credito del Cliente')
+            elif total_balance != '' or total_balance != False or total_balance != None:
+                for balance in total_balance:
+                    amount += balance.amount_residual_signed
+                credit = partner.credit_limit - amount
+                if self.amount_total > credit:
+                    raise UserError('El Pedido Supera el Limite de Credito del Cliente')
+        else:
+            total_balance = self.env['account.move'].search([
+                ('partner_id', '=', self.partner_id.id),
+                ('amount_residual_signed', '>', 0),
+            ])
+            if self.amount_total > self.partner_id.credit_limit:
+                raise UserError('El Pedido Supera el Limite de Credito del Cliente')
+            elif total_balance != '' or total_balance != False or total_balance != None:
+                for balance in total_balance:
+                    amount += balance.amount_residual_signed
+                credit = self.partner_id.credit_limit - amount
+                if self.amount_total > credit:
+                    raise UserError('El Pedido Supera el Limite de Credito del Cliente')
 
         return res
