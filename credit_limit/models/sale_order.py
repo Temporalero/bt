@@ -12,12 +12,6 @@ class SaleOrder(models.Model):
     _inherit = 'sale.order'
 
 
-    @api.onchange('expected_date')
-    def _onchange_commitment_date(self):
-        today = fields.Datetime.now()
-        expired_date = fields.Datetime.from_string(today) + relativedelta(months=1)
-        self.commitment_date = expired_date
-
     @api.model
     def create(self, vals):
         res = super(SaleOrder, self).create(vals)

@@ -8,12 +8,22 @@
       <field name="model">hr.employee</field>
       <field name="inherit_id" ref="hr.view_employee_form" />
       <field name="arch" type="xml">
+        <xpath expr="//page[@name='personal_information']/group[1]/group[7]" position="inside">
+          <field name="rfc"/>
+          <field name="curp"/>
+        </xpath>
         <xpath expr="//page[@name='personal_information']/group[1]" position="inside">
           <group name="salary" string="Salario">
             <field name="daily_salary"/>
             <field name="integrated_daily_wage"/>
             <field name="monthly_salary"/>
             <field name="business_name"/>
+            <field name="attendance_bonus"/>
+            <field name="punctuality_voucher"/>
+            <field name="pantry_vouchers"/>
+            <field name="imss_no"/>
+            <field name="infonavit_credit_no"/>
+            <field name="discount_factor"/>
           </group>
         </xpath>
       </field>
