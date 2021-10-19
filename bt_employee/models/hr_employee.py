@@ -27,3 +27,31 @@ class HrEmployee(models.Model):
         string="Business name",
         help="Assigned business name"
     )
+    attendance_bonus = fields.Float(
+        string="Attendance Bonus",
+        help="Attendance Bonus"
+    )
+    punctuality_voucher = fields.Float(
+        string="Punctuality Voucher",
+        help="Punctuality Voucher"
+    )
+    pantry_vouchers = fields.Float(
+        string="Pantry Vouchers",
+        help="Pantry Vouchers"
+    )
+    curp = fields.Char(
+        string="CURP"
+    )
+    rfc = fields.Char(
+        string="RFC"
+    )
+    imss_no = fields.Char(
+        string="N° IMSS"
+    )
+    infonavit_credit_no = fields.Char(
+        string="N° Credit Infonavit"
+    )
+    discount_factor = fields.Char(
+        string="Discount Factor",
+        help="Discount Factor"
+    )

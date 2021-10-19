@@ -21,6 +21,12 @@ msgid "Assigned business name"
 msgstr "Razón Social de Empleado"
 
 #. module: bt_employee
+#: model:ir.model.fields,field_description:bt_employee.field_hr_employee__attendance_bonus
+#: model:ir.model.fields,help:bt_employee.field_hr_employee__attendance_bonus
+msgid "Attendance Bonus"
+msgstr "Bono de asistencia"
+
+#. module: bt_employee
 #: model:ir.model.fields,field_description:bt_employee.field_hr_employee__business_name
 msgid "Business name"
 msgstr "Razón Social"
@@ -29,6 +35,12 @@ msgstr "Razón Social"
 #: model:ir.model.fields,field_description:bt_employee.field_hr_employee__daily_salary
 msgid "Daily Salary"
 msgstr "Salario diario"
+
+#. module: bt_employee
+#: model:ir.model.fields,field_description:bt_employee.field_hr_employee__discount_factor
+#: model:ir.model.fields,help:bt_employee.field_hr_employee__discount_factor
+msgid "Discount Factor"
+msgstr "Factor de descuento"
 
 #. module: bt_employee
 #: model:ir.model.fields,help:bt_employee.field_hr_employee__daily_salary
@@ -74,4 +86,36 @@ msgstr "Salario Mensual"
 #: model:ir.model.fields,help:bt_employee.field_hr_employee__monthly_salary
 msgid "Monthly salary Employee"
 msgstr "Salario mensual del emplado"
+
+#. module: bt_employee
+#: model:ir.model.fields,field_description:bt_employee.field_hr_employee__infonavit_credit_no
+msgid "N° Credit Infonavit"
+msgstr "N° Credito Infonavit"
+
+#. module: bt_employee
+#: model:ir.model.fields,field_description:bt_employee.field_hr_employee__imss_no
+msgid "N° IMSS"
+msgstr ""
+
+#. module: bt_employee
+#: model:ir.model.fields,field_description:bt_employee.field_hr_employee__pantry_vouchers
+#: model:ir.model.fields,help:bt_employee.field_hr_employee__pantry_vouchers
+msgid "Pantry Vouchers"
+msgstr "Vales de Despensa"
+
+#. module: bt_employee
+#: model:ir.model.fields,field_description:bt_employee.field_hr_employee__punctuality_voucher
+#: model:ir.model.fields,help:bt_employee.field_hr_employee__punctuality_voucher
+msgid "Punctuality Voucher"
+msgstr "Bono de Puntualidad"
+
+#. module: bt_employee
+#: model:ir.model.fields,field_description:bt_employee.field_hr_employee__rfc
+msgid "RFC"
+msgstr ""
+
+#. module: bt_employee
+#: model_terms:ir.ui.view,arch_db:bt_employee.inherit_view_employee_form
+msgid "Salario"
+msgstr ""
 

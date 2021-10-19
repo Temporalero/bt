@@ -16,7 +16,7 @@
         'sale'
     ],
     'data': [
-        'views/product_price_list_view.xml',
+        'views/res_partner_view.xml',
     ],
     'demo': [],
     'qweb': [],
