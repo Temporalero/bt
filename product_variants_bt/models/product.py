@@ -29,6 +29,84 @@ class ProductTemplate(models.Model):
                 else:
                     product = False
 
+    @api.onchange('categ_id')
+    def _onchange_categ_id(self):
+        unspsc = None
+        res = None
+        if (self.categ_id.display_name == "Accesorios / Carteras" or
+                self.categ_id.display_name == "Bolsos" or 
+                self.categ_id.display_name == 'Accesorios / Marroquinería'):
+            unspsc = self.env['product.unspsc.code'].search(
+                [('code', '=', '53121601')]
+            )
+            res = unspsc.id
+        elif (self.categ_id.display_name == "Accesorios / Cintos"):
+            unspsc = self.env['product.unspsc.code'].search(
+                [('code', '=', '53102501')]
+            )
+            res = unspsc.id
+        elif (self.categ_id.display_name == "Accesorios / Perfumes"):
+            unspsc = self.env['product.unspsc.code'].search(
+                [('code', '=', '53131620')]
+            )
+            res = unspsc.id
+        elif (self.categ_id.display_name == "Calzado / Calzado caballero"):
+            unspsc = self.env['product.unspsc.code'].search(
+                [('code', '=', '53111601')]
+            )
+            res = unspsc.id
+        elif (self.categ_id.display_name == "Calzado / Calzado dama"):
+            unspsc = self.env['product.unspsc.code'].search(
+                [('code', '=', '53111602')]
+            )
+            res = unspsc.id
+
+        elif (self.categ_id.display_name == "Ropa / Vestido"):
+            unspsc = self.env['product.unspsc.code'].search(
+                [('code', '=', '53102002')]
+            )
+            res = unspsc.id
+        elif (self.categ_id.display_name == "Ropa / Pijama Dama"):
+            unspsc = self.env['product.unspsc.code'].search(
+                [('code', '=', '53102604')]
+            )
+            res = unspsc.id
+        elif (self.categ_id.display_name == "Ropa / Blusas"):
+            unspsc = self.env['product.unspsc.code'].search(
+                [('code', '=', '53101604')]
+            )
+            res = unspsc.id
+        elif (self.categ_id.display_name == "Ropa / Abrigos o chamarras caballero"):
+            unspsc = self.env['product.unspsc.code'].search(
+                [('code', '=', '53101802')]
+            )
+            res = unspsc.id
+        elif (self.categ_id.display_name == "Ropa / Pijama caballero"):
+            unspsc = self.env['product.unspsc.code'].search(
+                [('code', '=', '53102602')]
+            )
+            res = unspsc.id
+        elif (self.categ_id.display_name == "Ropa / Mascadas"):
+            unspsc = self.env['product.unspsc.code'].search(
+                [('code', '=', '53102502')]
+            )
+            res = unspsc.id
+        elif (self.categ_id.display_name == "Ropa / Súeter hombre"):
+            unspsc = self.env['product.unspsc.code'].search(
+                [('code', '=', '53101702')]
+            )
+            res = unspsc.id
+        elif (self.categ_id.display_name == "Ropa / Súeter mujer"):
+            unspsc = self.env['product.unspsc.code'].search(
+                [('code', '=', '53101704')]
+            )
+            res = unspsc.id
+        else:
+            res = False
+        self.unspsc_code_id = res
+
+
+
 
 
     default_code = fields.Char(
