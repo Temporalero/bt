@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+
+    <record id="custom_paperformat_purchase" model="report.paperformat">
+      <field name="name">Custom Paper Format Purchase</field>
+      <field name="default" eval="True"/>
+      <field name="format">custom</field>
+      <field name="page_height">297</field>
+      <field name="page_width">210</field>
+      <field name="orientation">Landscape</field>
+      <field name="margin_top">15</field>
+      <field name="margin_bottom">10</field>
+      <field name="margin_left">10</field>
+      <field name="margin_right">10</field>
+      <field name="header_line" eval="False"/>
+      <field name="header_spacing">3</field>
+      <field name="dpi">90</field>
+    </record>
+
+    <record id="purchase.action_report_purchase_order" model="ir.actions.report">
+      <field name="paperformat_id" ref="format_paper_purchase_report.custom_paperformat_purchase" />
+    </record>
+
+
+    <record id="purchase.report_purchase_quotation" model="ir.actions.report">
+      <field name="paperformat_id" ref="format_paper_purchase_report.custom_paperformat_purchase" />
+    </record>
+  
+  </data>
+</odoo>
