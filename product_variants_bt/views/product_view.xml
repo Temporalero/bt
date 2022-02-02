@@ -14,7 +14,9 @@
               <group>
                 <field name="brand_id" placeholder="Select" />
                 <field name="product_line" placeholder="Select" />
-                <field name="family_id" placeholder="Select" />
+                <field name="group_id" placeholder="Select" />
+                <field name="concept_id" placeholder="Select" />
+                <!--<field name="family_id" placeholder="Select" />-->
                 <field name="season_id" placeholder="Select" 
                   attrs="{'invisible': [('product_line', '=', 'perfumes')]}"  
                 />
@@ -34,7 +36,16 @@
                 <field name="sole_id" placeholder="Select"
                   attrs="{'invisible': [('product_line', '!=', 'footwear')]}"  
                 />
-                <field name="edge_color_id" placeholder="Select" />
+                <field name="edge_color_id" placeholder="Select"
+                  attrs="{
+                    'invisible': [
+                      '|',
+                      ('product_line', '=', 'accessories'),
+                      ('product_line', '=', 'perfumes'),
+                      ('product_line', '=', 'clothing')
+                    ]
+                  }"  
+                />
                 <field name="logo_color" placeholder="Select"
                   attrs="{'invisible': [('product_line', '!=', 'footwear')]}"  
                 />
@@ -44,8 +55,36 @@
                 <field name="last_id" placeholder="Select"
                   attrs="{'invisible': [('product_line', '!=', 'footwear')]}"  
                 />
-                <field name="base_color_id" placeholder="Select" />
-                <field name="base_finish_id" placeholder="Select" />
+                <field name="base_color_id" placeholder="Select" 
+                  attrs="{
+                    'invisible': [
+                      ('product_line', '=', 'perfumes')
+                    ]
+                  }"  
+                />
+                <field name="base_color2_id" placeholder="Select"
+                  attrs="{
+                    'invisible': [
+                      ('product_line', '=', 'perfumes')
+                    ]
+                  }"  
+                />
+                <field name="base_color3_id" placeholder="Select"
+                  attrs="{
+                    'invisible': [
+                      ('product_line', '=', 'perfumes')
+                    ]
+                  }"  
+                />
+                <field name="base_finish_id" placeholder="Select"
+                  attrs="{
+                    'invisible': [
+                      '|',
+                      ('product_line', '=', 'perfumes'),
+                      ('product_line', '=', 'clothing')
+                    ]
+                  }"  
+                />
               </group>
             </group>
           </page>

@@ -1,0 +1,9 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+acs_product_group_group_system,product.group.group.system,model_product_group,base.group_system,1,1,1,1
+acs_product_group_group_user,product.group.group.user,model_product_group,base.group_user,1,0,0,0
+acs_product_group_group_stock_manager,product.group.group.stock.manager,model_product_group,stock.group_stock_manager,1,1,1,1
+acs_product_group_group_stock_user,product.group.group.stock.user,model_product_group,stock.group_stock_user,1,0,0,0
+acs_product_concept_group_system,product.concept.group.system,model_product_concept,base.group_system,1,1,1,1
+acs_product_concept_group_user,product.concept.group.user,model_product_concept,base.group_user,1,0,0,0
+acs_product_concept_group_stock_manager,product.concept.group.stock.manager,model_product_concept,stock.group_stock_manager,1,1,1,1
+acs_product_concept_group_stock_user,product.concept.group.stock.user,model_product_concept,stock.group_stock_user,1,0,0,0
