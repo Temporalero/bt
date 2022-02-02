@@ -189,3 +189,41 @@ class ProductUpper(models.Model):
         ('name_uniq', 'unique (name)',
         'El Nombre que intenta registrar ya existe.'),
     ]
+
+
+class ProductGroup(models.Model):
+    _name = 'product.group'
+    _description = 'Product Group'
+    _rec_name = 'name'
+    _order = 'name'
+
+    name = fields.Char(
+        string="Name",
+        required=True
+    )
+
+    _sql_constraints = [
+        ('name_uniq', 'unique (name)',
+        'El nombre de la Familia que intenta registrar ya existe.'),
+    ]
+
+
+class ProductConcept(models.Model):
+    _name = 'product.concept'
+    _description = 'Product Concept'
+    _rec_name = 'name'
+    _order = 'name'
+
+    name = fields.Char(
+        string="Name",
+        required=True
+    )
+    group_id = fields.Many2one(
+        'product.group',
+        string="Grupo Concepto",
+    )
+
+    _sql_constraints = [
+        ('name_uniq', 'unique (name)',
+        'El nombre de la Familia que intenta registrar ya existe.'),
+    ]

@@ -128,7 +128,7 @@ class ProductTemplate(models.Model):
     classification_id = fields.Many2one(
         'product.classification',
         ondelete='restrict',
-        string="Classification"
+        string="Nivel"
     )
     brand_id = fields.Many2one(
         'product.brand',
@@ -163,6 +163,16 @@ class ProductTemplate(models.Model):
         string="Base Color",
         ondelete='restrict'
     )
+    base_color2_id = fields.Many2one(
+        'product.color',
+        string="Base Color 2",
+        ondelete='restrict'
+    )
+    base_color3_id = fields.Many2one(
+        'product.color',
+        string="Base Color 3",
+        ondelete='restrict'
+    )
     base_finish_id = fields.Many2one(
         'product.base.finish',
         string="Base finish",
@@ -171,8 +181,20 @@ class ProductTemplate(models.Model):
     family_id = fields.Many2one(
         'product.family',
         string="Family",
+        ondelete='restrict'
+    )
+    group_id = fields.Many2one(
+        'product.group',
+        string="Grupo Concepto",
         required=True,
         ondelete='restrict'
+    )
+    concept_id = fields.Many2one(
+        'product.concept',
+        string="Sub Grupo Concepto",
+        required=True,
+        ondelete='restrict',
+        domain="[('group_id', '=', group_id)]"
     )
     edge_color_id = fields.Many2one(
         'product.color',
