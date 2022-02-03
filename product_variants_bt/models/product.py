@@ -125,10 +125,10 @@ class ProductTemplate(models.Model):
         required=True,
         help="Product Line"
     )
-    classification_id = fields.Many2one(
-        'product.classification',
+    level_id = fields.Many2one(
+        'product.level',
         ondelete='restrict',
-        string="Nivel"
+        string="Level"
     )
     brand_id = fields.Many2one(
         'product.brand',

@@ -1,5 +1,0 @@
-id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
-acs_product_classification_group_system,product.classification.group.system,model_product_classification,base.group_system,1,1,1,1
-acs_product_classification_group_user,product.classification.group.user,model_product_classification,base.group_user,1,0,0,0
-acs_product_classification_group_stock_manager,product.classification.group.stock.manager,model_product_classification,stock.group_stock_manager,1,1,1,1
-acs_product_classification_group_stock_user,product.classification.group.stock.user,model_product_classification,stock.group_stock_user,1,0,0,0
