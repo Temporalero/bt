@@ -21,7 +21,7 @@
                   attrs="{'invisible': [('product_line', '=', 'perfumes')]}"  
                 />
                 <field name="style_id" string="Supplier Style" placeholder="Select"/>
-                <field name="classification_id" placeholder="Select" />
+                <field name="level_id" placeholder="Select" />
                 <field name="upper_id" placeholder="Select"
                   attrs="{'invisible': [('product_line', '!=', 'footwear')]}"  
                 />
@@ -39,10 +39,7 @@
                 <field name="edge_color_id" placeholder="Select"
                   attrs="{
                     'invisible': [
-                      '|',
-                      ('product_line', '=', 'accessories'),
-                      ('product_line', '=', 'perfumes'),
-                      ('product_line', '=', 'clothing')
+                      ('product_line', 'not in', ('purse', 'footwear')),
                     ]
                   }"  
                 />

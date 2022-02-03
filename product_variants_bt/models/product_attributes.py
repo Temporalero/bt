@@ -106,9 +106,9 @@ class ProductBaseFinish(models.Model):
     ]
 
 
-class ProductClassification(models.Model):
-    _name = 'product.classification'
-    _description = 'Product Classification'
+class ProductNivel(models.Model):
+    _name = 'product.level'
+    _description = 'Product Level'
     _rec_name = 'name'
     _order = 'name'
 
@@ -119,7 +119,7 @@ class ProductClassification(models.Model):
 
     _sql_constraints = [
         ('name_uniq', 'unique (name)',
-        'El nombre de la Clasificación que intenta registrar ya existe.'),
+        'El nombre del Nivel que intenta registrar ya existe.'),
     ]
 
 
