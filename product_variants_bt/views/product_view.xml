@@ -39,10 +39,14 @@
                 <field name="edge_color_id" placeholder="Select"
                   attrs="{
                     'invisible': [
-                      ('product_line', 'not in', ('purse', 'footwear')),
+                      '|','|',
+                      ('product_line', '=', 'accessories'),
+                      ('product_line', '=', 'perfumes'),
+                      ('product_line', '=', 'clothing')
                     ]
                   }"  
                 />
+                  <!--('product_line', 'not in', ('purse', 'footwear')),-->
                 <field name="logo_color" placeholder="Select"
                   attrs="{'invisible': [('product_line', '!=', 'footwear')]}"  
                 />

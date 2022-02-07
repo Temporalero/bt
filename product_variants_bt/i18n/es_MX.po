@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 14.0-20201002\n"
+"Project-Id-Version: Odoo Server 14.0+e-20210728\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-13 17:30+0000\n"
-"PO-Revision-Date: 2021-05-13 17:30+0000\n"
+"POT-Creation-Date: 2022-02-07 13:07+0000\n"
+"PO-Revision-Date: 2022-02-07 13:07+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,52 +16,433 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: product_variants_bt
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_brand__abbreviation
+msgid "Abbreviation"
+msgstr "Abreviatura"
+
+#. module: product_variants_bt
+#: model:ir.model.fields.selection,name:product_variants_bt.selection__product_template__product_line__accessories
+msgid "Accessories"
+msgstr "Accesorios"
+
+#. module: product_variants_bt
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_brand__active
+msgid "Active.?"
+msgstr "Activo?"
+
+#. module: product_variants_bt
+#: model_terms:ir.ui.view,arch_db:product_variants_bt.inherit_product_template_form_view
+msgid "Additional Information"
+msgstr "Información Adicional"
+
+#. module: product_variants_bt
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_product__base_color_id
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_template__base_color_id
+msgid "Base Color"
+msgstr "Color Base"
+
+#. module: product_variants_bt
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_product__base_color2_id
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_template__base_color2_id
+msgid "Base Color 2"
+msgstr "Color Base 2"
+
+#. module: product_variants_bt
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_product__base_color3_id
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_template__base_color3_id
+msgid "Base Color 3"
+msgstr "Color Base 3"
+
+#. module: product_variants_bt
+#: model:ir.actions.act_window,name:product_variants_bt.action_product_base_finish
+#: model:ir.model,name:product_variants_bt.model_product_base_finish
+#: model:ir.ui.menu,name:product_variants_bt.base_finish_menu
+#: model_terms:ir.ui.view,arch_db:product_variants_bt.view_product_base_finish_tree
+msgid "Base Finish"
+msgstr "Acabado base"
+
+#. module: product_variants_bt
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_product__base_finish_id
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_template__base_finish_id
+msgid "Base finish"
+msgstr "Acabado base"
+
+#. module: product_variants_bt
+#: model:ir.model.fields.selection,name:product_variants_bt.selection__product_template__product_line__clothing
+msgid "Clothing"
+msgstr "Ropa"
+
+#. module: product_variants_bt
+#: model:ir.actions.act_window,name:product_variants_bt.action_product_colors
+#: model:ir.model,name:product_variants_bt.model_product_color
+#: model:ir.ui.menu,name:product_variants_bt.colors_menu
+#: model_terms:ir.ui.view,arch_db:product_variants_bt.view_product_color_tree
+msgid "Colors"
+msgstr "Colores"
+
+#. module: product_variants_bt
+#: model_terms:ir.ui.view,arch_db:product_variants_bt.view_product_concept_tree
+msgid "Concept"
+msgstr "Concepto"
+
+#. module: product_variants_bt
+#: model_terms:ir.actions.act_window,help:product_variants_bt.action_product_base_finish
+msgid "Create New Base Finish"
+msgstr "Crear nuevo acabado base"
+
+#. module: product_variants_bt
+#: model_terms:ir.actions.act_window,help:product_variants_bt.action_product_colors
+msgid "Create New Colors"
+msgstr "Crear nuevo color"
+
+#. module: product_variants_bt
+#: model_terms:ir.actions.act_window,help:product_variants_bt.action_product_group
+msgid "Create New Group Concept"
+msgstr "Crear nuevo Grupo Concepto"
+
+#. module: product_variants_bt
+#: model_terms:ir.actions.act_window,help:product_variants_bt.action_product_last
+msgid "Create New Last"
+msgstr "Crear nuevo Horma"
+
+#. module: product_variants_bt
+#: model_terms:ir.actions.act_window,help:product_variants_bt.action_product_level
+msgid "Create New Level"
+msgstr "Crear nuevo Nivel"
+
+#. module: product_variants_bt
+#: model_terms:ir.actions.act_window,help:product_variants_bt.action_product_lining
+msgid "Create New Lining"
+msgstr "Crear Nuevo Recubrimiento"
+
+#. module: product_variants_bt
 #: model_terms:ir.actions.act_window,help:product_variants_bt.action_product_manufacturers
 msgid "Create New Manufacturers"
 msgstr "Crear Nueva Marca de Fabricantes"
 
 #. module: product_variants_bt
+#: model_terms:ir.actions.act_window,help:product_variants_bt.action_product_season
+msgid "Create New Seasons"
+msgstr "Crear Nueva Temporada"
+
+#. module: product_variants_bt
+#: model_terms:ir.actions.act_window,help:product_variants_bt.action_product_sole
+msgid "Create New Soles"
+msgstr "Crear nueva suela"
+
+#. module: product_variants_bt
+#: model_terms:ir.actions.act_window,help:product_variants_bt.action_product_style
+msgid "Create New Style"
+msgstr "Crear Nuevo Estilo"
+
+#. module: product_variants_bt
+#: model_terms:ir.actions.act_window,help:product_variants_bt.action_product_concept
+msgid "Create New Sub Group Concept"
+msgstr "Crear nuevo concepto de subgrupo"
+
+#. module: product_variants_bt
+#: model_terms:ir.actions.act_window,help:product_variants_bt.action_product_stencil
+msgid "Create New Templates"
+msgstr "Crear nuevas plantillas"
+
+#. module: product_variants_bt
+#: model_terms:ir.actions.act_window,help:product_variants_bt.action_product_upper
+msgid "Create New Upper"
+msgstr "Crear nuevo Corte"
+
+#. module: product_variants_bt
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_base_finish__create_uid
 #: model:ir.model.fields,field_description:product_variants_bt.field_product_brand__create_uid
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_color__create_uid
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_concept__create_uid
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_family__create_uid
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_group__create_uid
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_last__create_uid
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_level__create_uid
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_lining__create_uid
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_season__create_uid
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_sole__create_uid
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_stencil__create_uid
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_style__create_uid
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_upper__create_uid
 msgid "Created by"
 msgstr ""
 
 #. module: product_variants_bt
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_base_finish__create_date
 #: model:ir.model.fields,field_description:product_variants_bt.field_product_brand__create_date
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_color__create_date
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_concept__create_date
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_family__create_date
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_group__create_date
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_last__create_date
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_level__create_date
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_lining__create_date
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_season__create_date
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_sole__create_date
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_stencil__create_date
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_style__create_date
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_upper__create_date
 msgid "Created on"
 msgstr ""
 
 #. module: product_variants_bt
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_base_finish__display_name
 #: model:ir.model.fields,field_description:product_variants_bt.field_product_brand__display_name
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_color__display_name
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_concept__display_name
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_family__display_name
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_group__display_name
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_last__display_name
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_level__display_name
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_lining__display_name
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_season__display_name
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_sole__display_name
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_stencil__display_name
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_style__display_name
 #: model:ir.model.fields,field_description:product_variants_bt.field_product_template__display_name
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_upper__display_name
 msgid "Display Name"
 msgstr "Nombre mostrado"
 
 #. module: product_variants_bt
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_product__edge_color_id
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_template__edge_color_id
+msgid "Edge Color"
+msgstr "Color del Borde"
+
+#. module: product_variants_bt
+#: model:ir.model.constraint,message:product_variants_bt.constraint_product_upper_name_uniq
+msgid "El Nombre que intenta registrar ya existe."
+msgstr ""
+
+#. module: product_variants_bt
+#: model:ir.model.constraint,message:product_variants_bt.constraint_product_concept_name_uniq
+#: model:ir.model.constraint,message:product_variants_bt.constraint_product_family_name_uniq
+#: model:ir.model.constraint,message:product_variants_bt.constraint_product_group_name_uniq
+msgid "El nombre de la Familia que intenta registrar ya existe."
+msgstr ""
+
+#. module: product_variants_bt
+#: model:ir.model.constraint,message:product_variants_bt.constraint_product_last_name_uniq
+msgid "El nombre de la Horma que intenta registrar ya existe."
+msgstr ""
+
+#. module: product_variants_bt
+#: model:ir.model.constraint,message:product_variants_bt.constraint_product_stencil_name_uniq
+msgid "El nombre de la Plantilla que intenta registrar ya existe."
+msgstr ""
+
+#. module: product_variants_bt
+#: model:ir.model.constraint,message:product_variants_bt.constraint_product_sole_name_uniq
+msgid "El nombre de la Suela que intenta registrar ya existe."
+msgstr ""
+
+#. module: product_variants_bt
+#: model:ir.model.constraint,message:product_variants_bt.constraint_product_season_name_uniq
+msgid "El nombre de la Temporada que intenta registrar ya existe."
+msgstr ""
+
+#. module: product_variants_bt
+#: model:ir.model.constraint,message:product_variants_bt.constraint_product_brand_name_uniq
+msgid "El nombre de la marca que intenta registrar ya existe."
+msgstr ""
+
+#. module: product_variants_bt
+#: model:ir.model.constraint,message:product_variants_bt.constraint_product_base_finish_name_uniq
+msgid "El nombre del Acabado Base que intenta registrar ya existe."
+msgstr ""
+
+#. module: product_variants_bt
+#: model:ir.model.constraint,message:product_variants_bt.constraint_product_color_name_uniq
+msgid "El nombre del Color que intenta registrar ya existe."
+msgstr ""
+
+#. module: product_variants_bt
+#: model:ir.model.constraint,message:product_variants_bt.constraint_product_style_name_uniq
+msgid "El nombre del Estilo que intenta registrar ya existe."
+msgstr ""
+
+#. module: product_variants_bt
+#: model:ir.model.constraint,message:product_variants_bt.constraint_product_level_name_uniq
+msgid "El nombre del Nivel que intenta registrar ya existe."
+msgstr ""
+
+#. module: product_variants_bt
+#: model:ir.model.constraint,message:product_variants_bt.constraint_product_lining_name_uniq
+msgid "El nombre del Recubrimiento que intenta registrar ya existe."
+msgstr ""
+
+#. module: product_variants_bt
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_product__family_id
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_template__family_id
+msgid "Family"
+msgstr "Familia"
+
+#. module: product_variants_bt
+#: model:ir.model.fields.selection,name:product_variants_bt.selection__product_template__product_line__footwear
+msgid "Footwear"
+msgstr "Calzado"
+
+#. module: product_variants_bt
+#: model:ir.model.fields.selection,name:product_variants_bt.selection__product_template__logo_color__golder
+msgid "Golder"
+msgstr "Dorado"
+
+#. module: product_variants_bt
+#: model_terms:ir.ui.view,arch_db:product_variants_bt.view_product_group_tree
+msgid "Group"
+msgstr "Grupo"
+
+#. module: product_variants_bt
+#: model:ir.actions.act_window,name:product_variants_bt.action_product_group
+#: model:ir.ui.menu,name:product_variants_bt.group_menu
+msgid "Group Concept"
+msgstr "Grupo Concepto"
+
+#. module: product_variants_bt
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_concept__group_id
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_product__group_id
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_template__group_id
+msgid "Grupo Concepto"
+msgstr "Grupo Concepto"
+
+#. module: product_variants_bt
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_product__height
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_template__height
+msgid "Height"
+msgstr "Altura"
+
+#. module: product_variants_bt
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_base_finish__id
 #: model:ir.model.fields,field_description:product_variants_bt.field_product_brand__id
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_color__id
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_concept__id
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_family__id
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_group__id
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_last__id
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_level__id
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_lining__id
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_season__id
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_sole__id
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_stencil__id
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_style__id
 #: model:ir.model.fields,field_description:product_variants_bt.field_product_template__id
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_upper__id
 msgid "ID"
 msgstr ""
 
 #. module: product_variants_bt
+#: model_terms:ir.ui.view,arch_db:product_variants_bt.inherit_product_template_form_view
+msgid "Insole"
+msgstr "Plantilla"
+
+#. module: product_variants_bt
+#: model:ir.model.constraint,message:product_variants_bt.constraint_product_brand_abbre_uniq
+msgid "La Abreviatura de la marca que intenta registrar ya existe."
+msgstr ""
+
+#. module: product_variants_bt
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_product__last_id
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_template__last_id
+msgid "Last"
+msgstr "Horma"
+
+#. module: product_variants_bt
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_base_finish____last_update
 #: model:ir.model.fields,field_description:product_variants_bt.field_product_brand____last_update
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_color____last_update
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_concept____last_update
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_family____last_update
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_group____last_update
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_last____last_update
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_level____last_update
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_lining____last_update
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_season____last_update
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_sole____last_update
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_stencil____last_update
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_style____last_update
 #: model:ir.model.fields,field_description:product_variants_bt.field_product_template____last_update
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_upper____last_update
 msgid "Last Modified on"
 msgstr "Última modificación el"
 
 #. module: product_variants_bt
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_base_finish__write_uid
 #: model:ir.model.fields,field_description:product_variants_bt.field_product_brand__write_uid
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_color__write_uid
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_concept__write_uid
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_family__write_uid
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_group__write_uid
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_last__write_uid
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_level__write_uid
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_lining__write_uid
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_season__write_uid
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_sole__write_uid
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_stencil__write_uid
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_style__write_uid
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_upper__write_uid
 msgid "Last Updated by"
 msgstr ""
 
 #. module: product_variants_bt
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_base_finish__write_date
 #: model:ir.model.fields,field_description:product_variants_bt.field_product_brand__write_date
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_color__write_date
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_concept__write_date
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_family__write_date
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_group__write_date
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_last__write_date
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_level__write_date
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_lining__write_date
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_season__write_date
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_sole__write_date
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_stencil__write_date
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_style__write_date
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_upper__write_date
 msgid "Last Updated on"
 msgstr ""
+
+#. module: product_variants_bt
+#: model:ir.actions.act_window,name:product_variants_bt.action_product_last
+#: model:ir.model,name:product_variants_bt.model_product_last
+#: model:ir.ui.menu,name:product_variants_bt.last_menu
+#: model_terms:ir.ui.view,arch_db:product_variants_bt.view_product_last_tree
+msgid "Lasts"
+msgstr "Horma"
+
+#. module: product_variants_bt
+#: model:ir.actions.act_window,name:product_variants_bt.action_product_level
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_product__level_id
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_template__level_id
+#: model:ir.ui.menu,name:product_variants_bt.level_menu
+#: model_terms:ir.ui.view,arch_db:product_variants_bt.view_product_level_tree
+msgid "Level"
+msgstr "Nivel"
+
+#. module: product_variants_bt
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_product__lining_id
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_template__lining_id
+msgid "Linig"
+msgstr "Recubrimiento"
+
+#. module: product_variants_bt
+#: model:ir.actions.act_window,name:product_variants_bt.action_product_lining
+#: model:ir.ui.menu,name:product_variants_bt.lining_menu
+#: model_terms:ir.ui.view,arch_db:product_variants_bt.view_product_lining_tree
+msgid "Lining"
+msgstr "Recubrimiento"
 
 #. module: product_variants_bt
 #: model:ir.model.fields,field_description:product_variants_bt.field_product_brand__image
 msgid "Logo"
 msgstr "Logo"
+
+#. module: product_variants_bt
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_product__logo_color
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_template__logo_color
+msgid "Logo Color"
+msgstr "Color Logo"
 
 #. module: product_variants_bt
 #: model:ir.model.fields,field_description:product_variants_bt.field_product_brand__name
@@ -83,7 +464,24 @@ msgstr "Fabricantes"
 #: model_terms:ir.ui.view,arch_db:product_variants_bt.view_product_manufacturers_form
 #: model_terms:ir.ui.view,arch_db:product_variants_bt.view_product_manufacturers_tree
 msgid "Model Make"
-msgstr ""
+msgstr "Marca del modelo"
+
+#. module: product_variants_bt
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_base_finish__name
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_color__name
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_concept__name
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_family__name
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_group__name
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_last__name
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_level__name
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_lining__name
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_season__name
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_sole__name
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_stencil__name
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_style__name
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_upper__name
+msgid "Name"
+msgstr "Nombre"
 
 #. module: product_variants_bt
 #: model_terms:ir.ui.view,arch_db:product_variants_bt.view_product_manufacturers_kanban
@@ -91,11 +489,173 @@ msgid "Open"
 msgstr "Abierto"
 
 #. module: product_variants_bt
+#: model:ir.model.fields.selection,name:product_variants_bt.selection__product_template__product_line__perfumes
+msgid "Perfumes"
+msgstr "Perfumes"
+
+#. module: product_variants_bt
 #: model:ir.model,name:product_variants_bt.model_product_template
 msgid "Product"
 msgstr "Producto"
 
 #. module: product_variants_bt
+#: model:ir.model,name:product_variants_bt.model_product_concept
+msgid "Product Concept"
+msgstr "Producto Concepto"
+
+#. module: product_variants_bt
+#: model:ir.model,name:product_variants_bt.model_product_family
+msgid "Product Family"
+msgstr "Familia de Producto"
+
+#. module: product_variants_bt
+#: model:ir.model,name:product_variants_bt.model_product_group
+msgid "Product Group"
+msgstr "Grupo Producto"
+
+#. module: product_variants_bt
+#: model:ir.model,name:product_variants_bt.model_product_level
+msgid "Product Level"
+msgstr "Nivel Producto"
+
+#. module: product_variants_bt
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_product__product_line
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_template__product_line
+#: model:ir.model.fields,help:product_variants_bt.field_product_product__product_line
+#: model:ir.model.fields,help:product_variants_bt.field_product_template__product_line
+msgid "Product Line"
+msgstr "Linea de Producto"
+
+#. module: product_variants_bt
+#: model:ir.model,name:product_variants_bt.model_product_lining
+msgid "Product Linig"
+msgstr "Linea de Producto"
+
+#. module: product_variants_bt
 #: model_terms:ir.ui.view,arch_db:product_variants_bt.inherit_product_template_search_view
 msgid "Product Make"
 msgstr "Marca de Producto"
+
+#. module: product_variants_bt
+#: model:ir.model,name:product_variants_bt.model_product_stencil
+msgid "Product Template"
+msgstr "Plantilla de producto"
+
+#. module: product_variants_bt
+#: model:ir.model,name:product_variants_bt.model_product_upper
+msgid "Product Upper"
+msgstr "Corte Producto"
+
+#. module: product_variants_bt
+#: model:ir.model.fields.selection,name:product_variants_bt.selection__product_template__product_line__purse
+msgid "Purse"
+msgstr "Bolso"
+
+#. module: product_variants_bt
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_template__default_code
+msgid "Referencia Interna"
+msgstr ""
+
+#. module: product_variants_bt
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_product__season_id
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_template__season_id
+msgid "Season"
+msgstr "Temporada"
+
+#. module: product_variants_bt
+#: model:ir.model.fields,help:product_variants_bt.field_product_product__season_id
+#: model:ir.model.fields,help:product_variants_bt.field_product_template__season_id
+msgid "Season in which the product was launched"
+msgstr "Temporada en la que se lanzó el producto"
+
+#. module: product_variants_bt
+#: model:ir.actions.act_window,name:product_variants_bt.action_product_season
+#: model:ir.model,name:product_variants_bt.model_product_season
+#: model:ir.ui.menu,name:product_variants_bt.season_menu
+#: model_terms:ir.ui.view,arch_db:product_variants_bt.view_product_season_tree
+msgid "Seasons"
+msgstr "Temporadas"
+
+#. module: product_variants_bt
+#: model_terms:ir.ui.view,arch_db:product_variants_bt.inherit_product_template_form_view
+#: model_terms:ir.ui.view,arch_db:product_variants_bt.view_product_concept_tree
+msgid "Select"
+msgstr "Seleccione"
+
+#. module: product_variants_bt
+#: model:ir.model.fields.selection,name:product_variants_bt.selection__product_template__logo_color__silver
+msgid "Silver"
+msgstr "Plata"
+
+#. module: product_variants_bt
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_product__sole_id
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_template__sole_id
+msgid "Sole"
+msgstr "Suela"
+
+#. module: product_variants_bt
+#: model:ir.actions.act_window,name:product_variants_bt.action_product_sole
+#: model:ir.model,name:product_variants_bt.model_product_sole
+#: model:ir.ui.menu,name:product_variants_bt.soles_menu
+#: model_terms:ir.ui.view,arch_db:product_variants_bt.view_product_sole_tree
+msgid "Soles"
+msgstr "Suela"
+
+#. module: product_variants_bt
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_product__style_id
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_template__style_id
+msgid "Style"
+msgstr "Estilo"
+
+#. module: product_variants_bt
+#: model:ir.actions.act_window,name:product_variants_bt.action_product_style
+#: model:ir.model,name:product_variants_bt.model_product_style
+#: model:ir.ui.menu,name:product_variants_bt.style_menu
+#: model_terms:ir.ui.view,arch_db:product_variants_bt.view_product_style_tree
+msgid "Styles"
+msgstr "Estilo"
+
+#. module: product_variants_bt
+#: model:ir.actions.act_window,name:product_variants_bt.action_product_concept
+#: model:ir.ui.menu,name:product_variants_bt.concept_menu
+msgid "Sub Group Concept"
+msgstr "Sub Grupo Concepto"
+
+#. module: product_variants_bt
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_product__concept_id
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_template__concept_id
+msgid "Sub Grupo Concepto"
+msgstr "Sub Grupo Concepto"
+
+#. module: product_variants_bt
+#: model_terms:ir.ui.view,arch_db:product_variants_bt.inherit_product_template_form_view
+msgid "Supplier Style"
+msgstr "Estilo del proveedor"
+
+#. module: product_variants_bt
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_product__stencil_id
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_template__stencil_id
+msgid "Template"
+msgstr "Plantilla"
+
+#. module: product_variants_bt
+#: model:ir.model.fields,help:product_variants_bt.field_product_product__logo_color
+#: model:ir.model.fields,help:product_variants_bt.field_product_template__logo_color
+msgid "Template Logo Color"
+msgstr "Color del logotipo de la plantilla"
+
+#. module: product_variants_bt
+#: model:ir.actions.act_window,name:product_variants_bt.action_product_stencil
+#: model:ir.ui.menu,name:product_variants_bt.stencil_menu
+#: model_terms:ir.ui.view,arch_db:product_variants_bt.view_product_stencil_tree
+msgid "Templates"
+msgstr "Plantillas"
+
+#. module: product_variants_bt
+#: model:ir.actions.act_window,name:product_variants_bt.action_product_upper
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_product__upper_id
+#: model:ir.model.fields,field_description:product_variants_bt.field_product_template__upper_id
+#: model:ir.ui.menu,name:product_variants_bt.upper_menu
+#: model_terms:ir.ui.view,arch_db:product_variants_bt.view_product_upper_tree
+msgid "Upper"
+msgstr "Corte"
